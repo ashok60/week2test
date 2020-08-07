@@ -1,51 +1,40 @@
 package studentassement;
 import java.util.*;
-
-
-
-
-
-
-
-
-public class StudentsMain  {	
-	
-	Set<Student> set=new HashSet<Student>();
-	
-	public static void main(String[] args) {
-		
-	
-	StudentsMain demo= new StudentsMain();
-	demo.runApp();
-	
+public class StudentMain{
+void validate (int age) throws AgeException {
+	if (age<21){
+		throws new AgeException();
 	}
+}
 
-public void runApp() {	
-	try {
-		if (Age<21){
-			throw new AgeException();
+
+public static void main(String [] args) {
+	
+	Set<Student> hset = new HashSet<>();
+	Set<Student> hset1 = new HashSet<>();
+	Student s1 = new Student("101",20);
+	Student s2 = new Student("102,21);
+	Student s3 = new Student("103",24);
+	hset.add(s1);
+	hset.add(s2);
+	hset.add(s3);
+	
+	System.out.println("Students List");
+	for(Student s:hset){
+		try {
+			System.out.println("Rollno "+s.getRollno()+" Age: "+s.getAge());
+			StudentMain ob = new StudentMain();
+			ob.validate(age);
+			hset1.add(s);
+		}
+		catch (AgeException e){
+			System.out.println(e);
 		}		
-	Student student1=new Student("Z21",21);
-	set.add(student1);
-	
-	Student student2=new Student("Z11",69);
-	set.add(student2);
-	
-	Student student3=new Student("Z33",32);
-	set.add(student3);
-	
-	Student student4=new Student("Z43",65);
-	set.add(student4);
-	
-	
-	Iterator<Student> iterator=set.iterator();
-	
-	while(iterator.hasNext()) {
-		Student student=iterator.next();
-		System.out.println("Age="+student.getAge()+" "+"Rollno"+student.getRollno());
-		
-	
-	catch (AgeException e){
-		System.out.println(e);
+			
 	}
+	System.out.println("Students with Age greater than or equal to 21 ");
+	for(Student s:hset1){
+		System.out.println(" Rollno "+s.getrollno()+" Age: "+s.getAge());
 	}
+	
+}
