@@ -10,10 +10,10 @@ public class StudentMain {
 	}
 
 	public void runApp() {
-		set.add(new Student("a1", 23));
-		set.add(new Student("b2", 21));
-		set.add(new Student("c3", 20));
-		set.add(new Student("d4", 22));
+		set.add(new Student("kk66", 67));
+		set.add(new Student("ck97", 56));
+		set.add(new Student("bk67", 42));
+		set.add(new Student("ak47", 23));
 		List<Student> list = changedlist(set);
 	}
 
